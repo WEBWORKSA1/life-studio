@@ -1,0 +1,25 @@
+<!--{"title": "Financial Freedom (FIRE) Calculator — Years to Financial Independence | Life.Studio", "desc": "Calculate your freedom number, savings rate and how many years until you're financially independent. Free FIRE calculator with an interactive growth chart.", "nav": "tools", "scripts": ["tools"]}-->
+<section class="page-hero"><div class="container"><div class="crumbs"><a href="index.html">Home</a> / <a href="tools.html">Tools</a> / Financial Freedom</div><h1>Financial freedom calculator</h1><p class="lead">How many years until work is optional? Adjust the numbers and watch the answer change.</p></div></section>
+<section><div class="container tool-wrap">
+  <form class="result-box form" id="fireTool" onsubmit="return false">
+    <div><label for="income">Annual take-home income ($)</label><input id="income" name="income" type="number" value="70000" min="0" step="1000"></div>
+    <div><label for="spend">Annual spending ($)</label><input id="spend" name="spend" type="number" value="45000" min="0" step="1000"></div>
+    <div><label for="saved">Already invested ($)</label><input id="saved" name="saved" type="number" value="20000" min="0" step="1000"></div>
+    <div class="row"><div><label for="ret">Real return %</label><input id="ret" name="ret" type="number" value="5" step="0.5" min="0" max="15"></div><div><label for="swr">Withdrawal rate %</label><input id="swr" name="swr" type="number" value="4" step="0.25" min="2" max="8"></div></div>
+    <p class="form-note">Educational estimate only, not financial advice. Real return = after inflation.</p>
+  </form>
+  <div>
+    <div class="result-box">
+      <div class="grid g4" style="gap:10px"><div class="stat"><b id="fYears">0</b><span>Years to FI</span></div><div class="stat"><b id="fTarget" style="font-size:1.3rem">$0</b><span>Freedom number</span></div><div class="stat"><b id="fRate">0%</b><span>Savings rate</span></div><div class="stat"><b id="fMonthly" style="font-size:1.3rem">$0</b><span>Saved / month</span></div></div>
+      <canvas id="fireCanvas" style="width:100%;height:220px;margin-top:18px" aria-label="Portfolio growth chart"></canvas>
+    </div>
+    <div class="ad-slot" data-slot="sidebar"></div>
+    <div class="stepper"><span class="eyebrow">Talk to a pro</span><h3>Get a free call with a fee-only financial coach</h3>
+      <form class="form" data-ls-form="Lead — Financial coach request" data-ok="Thanks! A financial coach match will reach out within 1 business day.">
+        <div class="row"><input name="name" placeholder="Name" required aria-label="Name"><input type="email" name="email" placeholder="Email" required aria-label="Email"></div>
+        <select name="goal" aria-label="Goal"><option>Pay off debt</option><option>Build an emergency fund</option><option>Start investing</option><option>Plan early retirement</option><option>Grow my business income</option></select>
+        <label class="check"><input type="checkbox" name="consent" value="yes" required> I agree to be contacted about my request.</label>
+        <button class="btn btn-primary" type="submit">Request my free call</button></form></div>
+  </div>
+</div></section>
+<section class="alt"><div class="container narrow article"><h2>The math behind financial independence</h2><p>Your <strong>freedom number</strong> is annual spending divided by a safe withdrawal rate. At 4% — a rule of thumb derived from historical US market studies such as the Trinity study — that's 25× annual spending. The single biggest lever is your <strong>savings rate</strong>: it both grows the portfolio and shrinks the target. Read <a href="guide-financial-independence.html">Financial independence basics</a>.</p></div></section>

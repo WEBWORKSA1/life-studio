@@ -1,0 +1,14 @@
+<!--{"title": "Free Online Habit Tracker with Streaks | Life.Studio", "desc": "A free monthly habit tracker with streaks and a consistency score. Add your habits, tick off each day and build routines that stick. Saved privately in your browser.", "nav": "tools", "scripts": ["tools"]}-->
+<section class="page-hero"><div class="container"><div class="crumbs"><a href="index.html">Home</a> / <a href="tools.html">Tools</a> / Habit Tracker</div><h1>Habit tracker</h1><p class="lead">Tick a box each day you do the habit. Don't break the chain. <span id="habitMonth"></span>.</p></div></section>
+<section id="habitTool"><div class="container">
+  <div class="grid g3">
+    <div class="card"><span class="muted">Consistency this month</span><div class="big-num" id="habitRate">0%</div><div class="meter mt2"><i id="habitBar" style="width:0"></i></div></div>
+    <form class="card form" id="habitAdd" style="grid-column:span 2"><label for="hname">Add a habit</label><div class="inline-form"><input id="hname" name="hname" placeholder="e.g. Meditate 10 minutes" maxlength="40"><button class="btn btn-dark" type="submit">Add</button></div><p class="form-note mb0">Tip: make it tiny. "Floss one tooth" beats "floss every night".</p></form>
+  </div>
+  <div class="result-box mt2 scroll-x"><table class="habit-table" id="habitTable"></table></div>
+  <div class="ad-slot" data-slot="inArticle"></div>
+  <div class="grid g2">
+    <div class="card"><h3>Stack it</h3><p>Anchor each habit to something you already do: "After I pour my coffee, I will write one line in my journal."</p><a href="guide-habit-stacking.html" class="more">Habit stacking guide →</a></div>
+    <div class="card"><h3>Make it social</h3><p>Join the 30-Day Life Redesign Challenge, post your streak, and compete for prizes.</p><a href="challenges.html" class="more">Join the challenge →</a></div>
+  </div>
+</div></section>
