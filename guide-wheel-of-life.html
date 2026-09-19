@@ -10,4 +10,4 @@ min: 7
 tool_href: "tool-wheel-of-life.html"
 tool_label: "Take the Wheel of Life"
 ---
-{% capture raw %}{% include_relative src/articles/wheel.md.html %}{% endcapture %}{% assign head = raw | split: "]}" | first %}{{ raw | remove_first: head | remove_first: "]}" }}
+{% capture raw %}{% include_relative src/articles/wheel.md.html %}{% endcapture %}{% assign head = raw | split: "]}" | first %}{% assign body = raw | remove_first: head | remove_first: "]}" %}{{ body }}

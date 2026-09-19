@@ -4,4 +4,4 @@ title: "Life Challenges & Contests with Prizes | Life.Studio"
 desc: "Join free Life.Studio challenges — like the 30-Day Life Redesign Challenge — share your transformation story and win cash prizes, coaching and more."
 nav: "challenges"
 ---
-{% capture raw %}{% include_relative src/pages/challenges.html %}{% endcapture %}{% assign head = raw | split: "}-->" | first %}{{ raw | remove_first: head | remove_first: "}-->" }}
+{% capture raw %}{% include_relative src/pages/challenges.html %}{% endcapture %}{% assign head = raw | split: "}-->" | first %}{% assign body = raw | remove_first: head | remove_first: "}-->" %}{{ body }}

@@ -10,4 +10,4 @@ min: 7
 tool_href: "tool-habit-tracker.html"
 tool_label: "Track your routine"
 ---
-{% capture raw %}{% include_relative src/articles/morning.md.html %}{% endcapture %}{% assign head = raw | split: "]}" | first %}{{ raw | remove_first: head | remove_first: "]}" }}
+{% capture raw %}{% include_relative src/articles/morning.md.html %}{% endcapture %}{% assign head = raw | split: "]}" | first %}{% assign body = raw | remove_first: head | remove_first: "]}" %}{{ body }}

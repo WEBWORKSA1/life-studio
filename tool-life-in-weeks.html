@@ -5,4 +5,4 @@ desc: "Enter your birth date and see every week of your life on one page: weeks 
 nav: "tools"
 scripts: ["tools"]
 ---
-{% capture raw %}{% include_relative src/pages/tool-life-in-weeks.html %}{% endcapture %}{% assign head = raw | split: "}-->" | first %}{{ raw | remove_first: head | remove_first: "}-->" }}
+{% capture raw %}{% include_relative src/pages/tool-life-in-weeks.html %}{% endcapture %}{% assign head = raw | split: "}-->" | first %}{% assign body = raw | remove_first: head | remove_first: "}-->" %}{{ body }}

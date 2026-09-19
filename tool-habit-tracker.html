@@ -5,4 +5,4 @@ desc: "A free monthly habit tracker with streaks and a consistency score. Add yo
 nav: "tools"
 scripts: ["tools"]
 ---
-{% capture raw %}{% include_relative src/pages/tool-habit-tracker.html %}{% endcapture %}{% assign head = raw | split: "}-->" | first %}{{ raw | remove_first: head | remove_first: "}-->" }}
+{% capture raw %}{% include_relative src/pages/tool-habit-tracker.html %}{% endcapture %}{% assign head = raw | split: "}-->" | first %}{% assign body = raw | remove_first: head | remove_first: "}-->" %}{{ body }}

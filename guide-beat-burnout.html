@@ -10,4 +10,4 @@ min: 8
 tool_href: "tool-wheel-of-life.html"
 tool_label: "Check your life balance"
 ---
-{% capture raw %}{% include_relative src/articles/stress.md.html %}{% endcapture %}{% assign head = raw | split: "]}" | first %}{{ raw | remove_first: head | remove_first: "]}" }}
+{% capture raw %}{% include_relative src/articles/stress.md.html %}{% endcapture %}{% assign head = raw | split: "]}" | first %}{% assign body = raw | remove_first: head | remove_first: "]}" %}{{ body }}

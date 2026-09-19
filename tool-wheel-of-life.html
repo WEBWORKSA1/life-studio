@@ -5,4 +5,4 @@ desc: "Rate 8 areas of your life on the free interactive Wheel of Life. Get an i
 nav: "tools"
 scripts: ["tools"]
 ---
-{% capture raw %}{% include_relative src/pages/tool-wheel-of-life.html %}{% endcapture %}{% assign head = raw | split: "}-->" | first %}{{ raw | remove_first: head | remove_first: "}-->" }}
+{% capture raw %}{% include_relative src/pages/tool-wheel-of-life.html %}{% endcapture %}{% assign head = raw | split: "}-->" | first %}{% assign body = raw | remove_first: head | remove_first: "}-->" %}{{ body }}

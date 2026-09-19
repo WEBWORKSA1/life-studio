@@ -4,4 +4,4 @@ title: "For Coaches — Get Qualified Clients from Life.Studio"
 desc: "Join the Life.Studio coach network. Receive pre-qualified client introductions, a featured profile, and speaking slots in challenges and videos."
 nav: "coaching"
 ---
-{% capture raw %}{% include_relative src/pages/for-coaches.html %}{% endcapture %}{% assign head = raw | split: "}-->" | first %}{{ raw | remove_first: head | remove_first: "}-->" }}
+{% capture raw %}{% include_relative src/pages/for-coaches.html %}{% endcapture %}{% assign head = raw | split: "}-->" | first %}{% assign body = raw | remove_first: head | remove_first: "}-->" %}{{ body }}

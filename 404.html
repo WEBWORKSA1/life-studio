@@ -7,4 +7,4 @@ nopopup: true
 noindex: true
 permalink: "/404.html"
 ---
-{% capture raw %}{% include_relative src/pages/404.html %}{% endcapture %}{% assign head = raw | split: "}-->" | first %}{{ raw | remove_first: head | remove_first: "}-->" }}
+{% capture raw %}{% include_relative src/pages/404.html %}{% endcapture %}{% assign head = raw | split: "}-->" | first %}{% assign body = raw | remove_first: head | remove_first: "}-->" %}{{ body }}

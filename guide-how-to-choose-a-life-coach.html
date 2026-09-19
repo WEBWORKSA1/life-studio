@@ -10,4 +10,4 @@ min: 8
 tool_href: "coaching.html#match"
 tool_label: "Get matched with a coach — free"
 ---
-{% capture raw %}{% include_relative src/articles/coach.md.html %}{% endcapture %}{% assign head = raw | split: "]}" | first %}{{ raw | remove_first: head | remove_first: "]}" }}
+{% capture raw %}{% include_relative src/articles/coach.md.html %}{% endcapture %}{% assign head = raw | split: "]}" | first %}{% assign body = raw | remove_first: head | remove_first: "]}" %}{{ body }}
