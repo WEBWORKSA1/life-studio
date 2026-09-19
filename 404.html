@@ -1,0 +1,10 @@
+---
+layout: "default"
+title: "Page not found | Life.Studio"
+desc: "This page could not be found."
+nav: ""
+nopopup: true
+noindex: true
+permalink: "/404.html"
+---
+{% capture raw %}{% include_relative src/pages/404.html %}{% endcapture %}{% assign head = raw | split: "}-->" | first %}{{ raw | remove_first: head | remove_first: "}-->" }}

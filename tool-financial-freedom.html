@@ -1,0 +1,8 @@
+---
+layout: "default"
+title: "Financial Freedom (FIRE) Calculator — Years to Financial Independence | Life.Studio"
+desc: "Calculate your freedom number, savings rate and how many years until you're financially independent. Free FIRE calculator with an interactive growth chart."
+nav: "tools"
+scripts: ["tools"]
+---
+{% capture raw %}{% include_relative src/pages/tool-financial-freedom.html %}{% endcapture %}{% assign head = raw | split: "}-->" | first %}{{ raw | remove_first: head | remove_first: "}-->" }}

@@ -1,0 +1,7 @@
+---
+layout: "default"
+title: "Advertise, Sponsor & Partner with Life.Studio"
+desc: "Reach a motivated audience investing in health, career, money and personal growth. Display ads, sponsored tools, newsletter placements, challenge sponsorships and affiliate partnerships."
+nav: ""
+---
+{% capture raw %}{% include_relative src/pages/advertise.html %}{% endcapture %}{% assign head = raw | split: "}-->" | first %}{{ raw | remove_first: head | remove_first: "}-->" }}

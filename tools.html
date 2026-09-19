@@ -1,0 +1,7 @@
+---
+layout: "default"
+title: "Free Life Design Tools — Wheel of Life, Goal Planner, Habit Tracker | Life.Studio"
+desc: "Six free interactive life-design tools: Wheel of Life assessment, SMART goal planner, habit tracker, life in weeks, financial freedom calculator and purpose quiz."
+nav: "tools"
+---
+{% capture raw %}{% include_relative src/pages/tools.html %}{% endcapture %}{% assign head = raw | split: "}-->" | first %}{{ raw | remove_first: head | remove_first: "}-->" }}

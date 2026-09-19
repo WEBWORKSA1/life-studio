@@ -1,0 +1,8 @@
+---
+layout: "default"
+title: "Purpose Archetype Quiz — Find What Drives You | Life.Studio"
+desc: "Take the free 12-question purpose quiz to discover your archetype — Creator, Healer, Leader, Explorer, Teacher or Builder — and get your next step."
+nav: "tools"
+scripts: ["tools"]
+---
+{% capture raw %}{% include_relative src/pages/tool-purpose-quiz.html %}{% endcapture %}{% assign head = raw | split: "}-->" | first %}{{ raw | remove_first: head | remove_first: "}-->" }}

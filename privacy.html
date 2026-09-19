@@ -1,0 +1,7 @@
+---
+layout: "default"
+title: "Privacy Policy | Life.Studio"
+desc: "How Life.Studio collects, uses and protects your information, including cookies, advertising and form submissions."
+nav: ""
+---
+{% capture raw %}{% include_relative src/pages/privacy.html %}{% endcapture %}{% assign head = raw | split: "}-->" | first %}{{ raw | remove_first: head | remove_first: "}-->" }}
