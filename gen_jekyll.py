@@ -17,6 +17,8 @@ OUT = ROOT / "_jekyll_out"
 def yq(s):
     return json.dumps(s, ensure_ascii=False)  # JSON strings are valid YAML double-quoted scalars
 
+# NOTE: never put a "}" inside {{ ... }} -- Ruby Liquid ends the output tag at the first "}".
+
 
 MENU = "".join(
     '<li><a href="%s"{%% if page.nav == "%s" %%} aria-current="page"{%% endif %%}>%s</a></li>' % (h, k, l)
@@ -70,7 +72,7 @@ def main():
             files[p.name] = fm(d) + body
         else:
             files[p.name] = fm(d) + ("{%% capture raw %%}{%% include_relative src/pages/%s %%}{%% endcapture %%}"
-                                     "{%% assign head = raw | split: \"}-->\" | first %%}{{ raw | remove_first: head | remove_first: \"}-->\" }}\n" % p.name)
+                                     "{%% assign head = raw | split: \"}-->\" | first %%}{%% assign body = raw | remove_first: head | remove_first: \"}-->\" %%}{{ body }}\n" % p.name)
     arts = []
     for p in sorted((ROOT / "src/articles").glob("*.html")):
         first = p.read_text(encoding="utf-8").split("\n", 1)[0]
@@ -89,7 +91,7 @@ def main():
              "nav": "guides", "article": True, "cat": m["cat"], "min": m["min"], "tool_href": m["tool"][0],
              "tool_label": m["tool"][1]}
         files[m["slug"] + ".html"] = fm(d) + ("{%% capture raw %%}{%% include_relative src/articles/%s %%}{%% endcapture %%}"
-            "{%% assign head = raw | split: \"]}\" | first %%}{{ raw | remove_first: head | remove_first: \"]}\" }}\n" % fname)
+            "{%% assign head = raw | split: \"]}\" | first %%}{%% assign body = raw | remove_first: head | remove_first: \"]}\" %%}{{ body }}\n" % fname)
     for k, v in files.items():
         (OUT / k).parent.mkdir(parents=True, exist_ok=True)
         (OUT / k).write_text(v, encoding="utf-8")
