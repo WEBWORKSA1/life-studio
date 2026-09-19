@@ -1,0 +1,13 @@
+---
+layout: "article"
+title: "How to Design Your Life: A 5-Step Framework That Works | Life.Studio"
+h1: "How to Design Your Life: A 5-Step Framework That Works"
+desc: "A practical, 5-step life design framework — assess, explore, prototype, commit and review — to go from feeling stuck to a clear, testable plan."
+nav: "guides"
+article: true
+cat: "Life design"
+min: 9
+tool_href: "tool-wheel-of-life.html"
+tool_label: "Wheel of Life check-up"
+---
+{% capture raw %}{% include_relative src/articles/design-your-life.md.html %}{% endcapture %}{% assign head = raw | split: "]}" | first %}{{ raw | remove_first: head | remove_first: "]}" }}

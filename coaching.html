@@ -1,0 +1,8 @@
+---
+layout: "default"
+title: "Find a Life Coach — Free Personalized Coach Matching | Life.Studio"
+desc: "Get matched with up to 3 vetted life, career, health, relationship or money coaches for free. Answer 5 quick questions and book a free 20-minute intro call."
+nav: "coaching"
+nopopup: true
+---
+{% capture raw %}{% include_relative src/pages/coaching.html %}{% endcapture %}{% assign head = raw | split: "}-->" | first %}{{ raw | remove_first: head | remove_first: "}-->" }}

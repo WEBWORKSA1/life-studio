@@ -1,0 +1,10 @@
+# GitHub Pages builds this site with Jekyll (free plan). Pages are thin wrappers
+# (front matter + include of src/pages/* or src/articles/*) rendered through _layouts/.
+title: Life.Studio
+siteurl: https://webworksa1.github.io/life-studio
+exclude:
+  - build.py
+  - gen_jekyll.py
+  - README.md
+  - docs
+  - _jekyll_out

@@ -1,3 +1,5 @@
 src/guides/
+_jekyll_out/
+_site/
 __pycache__/
 .DS_Store

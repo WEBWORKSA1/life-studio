@@ -1,0 +1,7 @@
+---
+layout: "default"
+title: "About Life.Studio — Our Mission"
+desc: "Life.Studio is an independent life-design studio: free tools, honest guides, vetted coaches and challenges that help people build better lives on purpose."
+nav: ""
+---
+{% capture raw %}{% include_relative src/pages/about.html %}{% endcapture %}{% assign head = raw | split: "}-->" | first %}{{ raw | remove_first: head | remove_first: "}-->" }}

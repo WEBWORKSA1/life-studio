@@ -1,0 +1,8 @@
+---
+layout: "default"
+title: "SMART Goal Planner — Free Goal Setting Tool | Life.Studio"
+desc: "Turn any goal into a SMART plan with dated milestones, an if-then obstacle plan and a weekly review rhythm. Free, printable and private."
+nav: "tools"
+scripts: ["tools"]
+---
+{% capture raw %}{% include_relative src/pages/tool-goal-planner.html %}{% endcapture %}{% assign head = raw | split: "}-->" | first %}{{ raw | remove_first: head | remove_first: "}-->" }}

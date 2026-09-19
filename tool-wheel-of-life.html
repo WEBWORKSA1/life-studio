@@ -1,0 +1,8 @@
+---
+layout: "default"
+title: "Wheel of Life Assessment — Free Interactive Tool | Life.Studio"
+desc: "Rate 8 areas of your life on the free interactive Wheel of Life. Get an instant balance chart, overall score and personalized focus areas. Download your wheel as an image."
+nav: "tools"
+scripts: ["tools"]
+---
+{% capture raw %}{% include_relative src/pages/tool-wheel-of-life.html %}{% endcapture %}{% assign head = raw | split: "}-->" | first %}{{ raw | remove_first: head | remove_first: "}-->" }}

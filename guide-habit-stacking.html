@@ -1,0 +1,13 @@
+---
+layout: "article"
+title: "Habit Stacking: The Easiest Way to Build Habits That Stick | Life.Studio"
+h1: "Habit Stacking: The Easiest Way to Build Habits That Stick"
+desc: "Learn habit stacking — anchoring new habits to existing routines — with a step-by-step method, 25 example stacks and common pitfalls."
+nav: "guides"
+article: true
+cat: "Habits"
+min: 7
+tool_href: "tool-habit-tracker.html"
+tool_label: "Open the habit tracker"
+---
+{% capture raw %}{% include_relative src/articles/habit.md.html %}{% endcapture %}{% assign head = raw | split: "]}" | first %}{{ raw | remove_first: head | remove_first: "]}" }}

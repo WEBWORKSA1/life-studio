@@ -1,0 +1,8 @@
+---
+layout: "default"
+title: "Your Life in Weeks — Interactive Life Calendar | Life.Studio"
+desc: "Enter your birth date and see every week of your life on one page: weeks lived, weeks remaining, summers left and more. A free, private life calendar."
+nav: "tools"
+scripts: ["tools"]
+---
+{% capture raw %}{% include_relative src/pages/tool-life-in-weeks.html %}{% endcapture %}{% assign head = raw | split: "}-->" | first %}{{ raw | remove_first: head | remove_first: "}-->" }}
