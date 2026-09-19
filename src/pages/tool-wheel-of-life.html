@@ -1,0 +1,33 @@
+<!--{"title": "Wheel of Life Assessment — Free Interactive Tool | Life.Studio", "desc": "Rate 8 areas of your life on the free interactive Wheel of Life. Get an instant balance chart, overall score and personalized focus areas. Download your wheel as an image.", "nav": "tools", "scripts": ["tools"]}-->
+<section class="page-hero"><div class="container"><div class="crumbs"><a href="index.html">Home</a> / <a href="tools.html">Tools</a> / Wheel of Life</div><h1>Wheel of Life check-up</h1><p class="lead">Rate each area from 1 (very unsatisfied) to 10 (thriving). Be honest — nobody sees this but you.</p></div></section>
+<section id="wheelTool"><div class="container tool-wrap">
+  <div class="result-box"><h3>Rate your life areas</h3><div id="wheelInputs"></div></div>
+  <div>
+    <div class="result-box">
+      <canvas id="wheelCanvas" style="width:100%;max-width:520px;margin:0 auto" aria-label="Wheel of Life chart"></canvas>
+      <div class="grid g2 mt2">
+        <div class="stat"><b id="wheelScore">5.0</b><span>Life satisfaction (avg)</span></div>
+        <div class="stat"><b id="wheelBalance">10/10</b><span>Balance score</span></div>
+      </div>
+      <h3 class="mt2">Your top 3 focus areas</h3><ol id="wheelFocus"></ol>
+      <div style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn btn-dark btn-sm" id="wheelDownload" type="button">Download my wheel</button><a class="btn btn-ghost btn-sm" href="tool-goal-planner.html">Turn a focus area into a goal →</a></div>
+    </div>
+    <div class="ad-slot" data-slot="inArticle"></div>
+    <div class="stepper">
+      <span class="eyebrow">Free personalised report</span>
+      <h3>Email me my results + a 30-day action plan</h3>
+      <form class="form" data-ls-form="Lead — Wheel of Life report" data-ok="Sent! Your report and 30-day plan are on the way.">
+        <input type="hidden" name="wheel_scores" id="wheelSummary">
+        <div class="row"><input name="name" placeholder="First name" required aria-label="First name"><input type="email" name="email" placeholder="Email" required aria-label="Email"></div>
+        <label class="check"><input type="checkbox" name="coach_call" value="yes"> Book me a free 20-min call with a coach for my lowest area.</label>
+        <button class="btn btn-primary" type="submit">Send my report</button>
+      </form>
+    </div>
+  </div>
+</div></section>
+<section class="alt"><div class="container narrow article">
+<h2>How to read your Wheel of Life</h2>
+<p>The Wheel of Life is a classic coaching exercise, widely credited to Paul J. Meyer, that turns a vague feeling ("something is off") into a picture you can act on. The shape matters as much as the average: a big, lopsided wheel rolls badly, and a small, round one rolls slowly.</p>
+<ul><li><strong>Average below 5:</strong> focus on one foundation area — usually health or money — before anything else.</li><li><strong>Big gap between highest and lowest:</strong> your strongest area is often "borrowing" energy from your weakest. Rebalance deliberately.</li><li><strong>Everything 7+:</strong> you're ready for stretch goals. Pick the area with the most upside, not the lowest score.</li></ul>
+<p>Retake the check-up every 90 days. Your scores are saved in this browser so you can compare over time. Read the full guide: <a href="guide-wheel-of-life.html">How to use the Wheel of Life</a>.</p>
+</div></section>
