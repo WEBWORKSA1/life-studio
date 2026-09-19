@@ -1,0 +1,13 @@
+---
+layout: "article"
+title: "The Morning Routine Blueprint: Build One That Fits Your Life | Life.Studio"
+h1: "The Morning Routine Blueprint: Build One That Fits Your Life"
+desc: "How to design a realistic morning routine around sleep, movement, light and focus — with 15, 30 and 60-minute templates."
+nav: "guides"
+article: true
+cat: "Routines"
+min: 7
+tool_href: "tool-habit-tracker.html"
+tool_label: "Track your routine"
+---
+{% capture raw %}{% include_relative src/articles/morning.md.html %}{% endcapture %}{% assign head = raw | split: "]}" | first %}{{ raw | remove_first: head | remove_first: "]}" }}

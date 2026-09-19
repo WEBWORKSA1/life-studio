@@ -1,0 +1,13 @@
+---
+layout: "article"
+title: "Deep Work & Digital Minimalism: Reclaim Your Focus | Life.Studio"
+h1: "Deep Work & Digital Minimalism: Reclaim Your Focus"
+desc: "Practical strategies to reduce distraction and protect deep-focus time: phone rules, time blocking, notification detox and a 30-day reset."
+nav: "guides"
+article: true
+cat: "Productivity"
+min: 8
+tool_href: "tool-habit-tracker.html"
+tool_label: "Track focus habits"
+---
+{% capture raw %}{% include_relative src/articles/focus.md.html %}{% endcapture %}{% assign head = raw | split: "]}" | first %}{{ raw | remove_first: head | remove_first: "]}" }}

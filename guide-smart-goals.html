@@ -1,0 +1,13 @@
+---
+layout: "article"
+title: "SMART Goals vs. Systems: How to Set Goals You'll Actually Hit | Life.Studio"
+h1: "SMART Goals vs. Systems: How to Set Goals You'll Actually Hit"
+desc: "Why most goals fail, how SMART goals work, why systems matter more than targets, and a practical hybrid method you can use today."
+nav: "guides"
+article: true
+cat: "Goals"
+min: 8
+tool_href: "tool-goal-planner.html"
+tool_label: "Use the SMART goal planner"
+---
+{% capture raw %}{% include_relative src/articles/smart.md.html %}{% endcapture %}{% assign head = raw | split: "]}" | first %}{{ raw | remove_first: head | remove_first: "]}" }}

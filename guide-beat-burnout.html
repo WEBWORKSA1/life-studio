@@ -1,0 +1,13 @@
+---
+layout: "article"
+title: "Burnout: Signs, Causes and a Practical Recovery Plan | Life.Studio"
+h1: "Burnout: Signs, Causes and a Practical Recovery Plan"
+desc: "Understand burnout as defined by the WHO, recognise the warning signs, and follow a practical, step-by-step plan to recover and prevent relapse."
+nav: "guides"
+article: true
+cat: "Wellbeing"
+min: 8
+tool_href: "tool-wheel-of-life.html"
+tool_label: "Check your life balance"
+---
+{% capture raw %}{% include_relative src/articles/stress.md.html %}{% endcapture %}{% assign head = raw | split: "]}" | first %}{{ raw | remove_first: head | remove_first: "]}" }}

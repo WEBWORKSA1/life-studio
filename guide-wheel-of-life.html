@@ -1,0 +1,13 @@
+---
+layout: "article"
+title: "The Wheel of Life: How to Use It (With Examples) | Life.Studio"
+h1: "The Wheel of Life: How to Use It (With Examples)"
+desc: "What the Wheel of Life is, how to score each area honestly, how to interpret the shape, and how to turn the result into an action plan."
+nav: "guides"
+article: true
+cat: "Assessment"
+min: 7
+tool_href: "tool-wheel-of-life.html"
+tool_label: "Take the Wheel of Life"
+---
+{% capture raw %}{% include_relative src/articles/wheel.md.html %}{% endcapture %}{% assign head = raw | split: "]}" | first %}{{ raw | remove_first: head | remove_first: "]}" }}

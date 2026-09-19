@@ -1,0 +1,13 @@
+---
+layout: "article"
+title: "How to Choose a Life Coach (Costs, Credentials, Red Flags) | Life.Studio"
+h1: "How to Choose a Life Coach (Costs, Credentials, Red Flags)"
+desc: "Everything to know before hiring a life coach: what coaching is, typical prices, credentials like ICF, 12 questions to ask and red flags to avoid."
+nav: "guides"
+article: true
+cat: "Coaching"
+min: 8
+tool_href: "coaching.html#match"
+tool_label: "Get matched with a coach — free"
+---
+{% capture raw %}{% include_relative src/articles/coach.md.html %}{% endcapture %}{% assign head = raw | split: "]}" | first %}{{ raw | remove_first: head | remove_first: "]}" }}

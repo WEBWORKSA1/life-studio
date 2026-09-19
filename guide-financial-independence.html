@@ -1,0 +1,13 @@
+---
+layout: "article"
+title: "Financial Independence Basics: The Math of Making Work Optional | Life.Studio"
+h1: "Financial Independence Basics: The Math of Making Work Optional"
+desc: "The core math of financial independence: savings rate, the 25x rule, the 4% guideline and practical steps to shorten your timeline."
+nav: "guides"
+article: true
+cat: "Money"
+min: 9
+tool_href: "tool-financial-freedom.html"
+tool_label: "Run the freedom calculator"
+---
+{% capture raw %}{% include_relative src/articles/fi.md.html %}{% endcapture %}{% assign head = raw | split: "]}" | first %}{{ raw | remove_first: head | remove_first: "]}" }}

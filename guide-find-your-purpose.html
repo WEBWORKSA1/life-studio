@@ -1,0 +1,13 @@
+---
+layout: "article"
+title: "How to Find Your Purpose (Without Waiting for an Epiphany) | Life.Studio"
+h1: "How to Find Your Purpose (Without Waiting for an Epiphany)"
+desc: "A realistic, research-informed approach to finding purpose: why passion is built not found, the ikigai model's limits, and experiments to try."
+nav: "guides"
+article: true
+cat: "Purpose"
+min: 8
+tool_href: "tool-purpose-quiz.html"
+tool_label: "Take the purpose quiz"
+---
+{% capture raw %}{% include_relative src/articles/purpose.md.html %}{% endcapture %}{% assign head = raw | split: "]}" | first %}{{ raw | remove_first: head | remove_first: "]}" }}
