@@ -5,4 +5,4 @@ desc: "Get matched with up to 3 vetted life, career, health, relationship or mon
 nav: "coaching"
 nopopup: true
 ---
-{% capture raw %}{% include_relative src/pages/coaching.html %}{% endcapture %}{% assign head = raw | split: "}-->" | first %}{{ raw | remove_first: head | remove_first: "}-->" }}
+{% capture raw %}{% include_relative src/pages/coaching.html %}{% endcapture %}{% assign head = raw | split: "}-->" | first %}{% assign body = raw | remove_first: head | remove_first: "}-->" %}{{ body }}

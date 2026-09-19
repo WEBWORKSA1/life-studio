@@ -10,4 +10,4 @@ min: 7
 tool_href: "tool-habit-tracker.html"
 tool_label: "Open the habit tracker"
 ---
-{% capture raw %}{% include_relative src/articles/habit.md.html %}{% endcapture %}{% assign head = raw | split: "]}" | first %}{{ raw | remove_first: head | remove_first: "]}" }}
+{% capture raw %}{% include_relative src/articles/habit.md.html %}{% endcapture %}{% assign head = raw | split: "]}" | first %}{% assign body = raw | remove_first: head | remove_first: "]}" %}{{ body }}

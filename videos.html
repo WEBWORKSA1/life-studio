@@ -4,4 +4,4 @@ title: "Life-Changing Videos — Talks on Habits, Purpose & Happiness | Life.Stu
 desc: "A curated library of the most useful talks on happiness, habits, purpose, productivity, stress and confidence — with practical takeaways."
 nav: "videos"
 ---
-{% capture raw %}{% include_relative src/pages/videos.html %}{% endcapture %}{% assign head = raw | split: "}-->" | first %}{{ raw | remove_first: head | remove_first: "}-->" }}
+{% capture raw %}{% include_relative src/pages/videos.html %}{% endcapture %}{% assign head = raw | split: "}-->" | first %}{% assign body = raw | remove_first: head | remove_first: "}-->" %}{{ body }}

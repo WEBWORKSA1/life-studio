@@ -4,4 +4,4 @@ title: "Support Life.Studio — Donate & Keep It Free"
 desc: "Life.Studio is reader-supported. Make a one-time or monthly donation to fund free tools, guides, challenge prizes, promotion and our growing team."
 nav: "support"
 ---
-{% capture raw %}{% include_relative src/pages/support.html %}{% endcapture %}{% assign head = raw | split: "}-->" | first %}{{ raw | remove_first: head | remove_first: "}-->" }}
+{% capture raw %}{% include_relative src/pages/support.html %}{% endcapture %}{% assign head = raw | split: "}-->" | first %}{% assign body = raw | remove_first: head | remove_first: "}-->" %}{{ body }}

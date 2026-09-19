@@ -5,4 +5,4 @@ desc: "Turn any goal into a SMART plan with dated milestones, an if-then obstacl
 nav: "tools"
 scripts: ["tools"]
 ---
-{% capture raw %}{% include_relative src/pages/tool-goal-planner.html %}{% endcapture %}{% assign head = raw | split: "}-->" | first %}{{ raw | remove_first: head | remove_first: "}-->" }}
+{% capture raw %}{% include_relative src/pages/tool-goal-planner.html %}{% endcapture %}{% assign head = raw | split: "}-->" | first %}{% assign body = raw | remove_first: head | remove_first: "}-->" %}{{ body }}

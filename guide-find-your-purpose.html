@@ -10,4 +10,4 @@ min: 8
 tool_href: "tool-purpose-quiz.html"
 tool_label: "Take the purpose quiz"
 ---
-{% capture raw %}{% include_relative src/articles/purpose.md.html %}{% endcapture %}{% assign head = raw | split: "]}" | first %}{{ raw | remove_first: head | remove_first: "]}" }}
+{% capture raw %}{% include_relative src/articles/purpose.md.html %}{% endcapture %}{% assign head = raw | split: "]}" | first %}{% assign body = raw | remove_first: head | remove_first: "]}" %}{{ body }}
