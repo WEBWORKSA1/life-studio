@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<section class="page-hero"><div class="container"><div class="crumbs"><a href="index.html">Home</a> / <a href="guides.html">Guides</a> / {{ page.cat }}</div>
+<span class="tag">{{ page.cat }}</span><h1 style="margin-top:14px;max-width:900px">{{ page.h1 }}</h1>
+<div class="article-meta"><span>By Life.Studio Editorial</span><span>·</span><span>{{ page.min }} min read</span><span>·</span><span>Updated {{ site.time | date: "%B %Y" }}</span></div></div></section>
+<section><div class="container layout-side">
+<article class="article">
+{{ content }}
+<div class="ad-slot" data-slot="inArticle"></div>
+<div class="card mt2"><h3>Put it into practice</h3><p>Reading changes nothing until you act. Start now:</p><a class="btn btn-primary" href="{{ page.tool_href }}">{{ page.tool_label }} →</a></div>
+<div class="share mt2 no-print"><strong style="align-self:center">Share:</strong><a class="btn btn-ghost btn-sm" data-share="x" href="#">X</a><a class="btn btn-ghost btn-sm" data-share="facebook" href="#">Facebook</a><a class="btn btn-ghost btn-sm" data-share="linkedin" href="#">LinkedIn</a><a class="btn btn-ghost btn-sm" data-share="whatsapp" href="#">WhatsApp</a><a class="btn btn-ghost btn-sm" data-share="pinterest" href="#">Pinterest</a><a class="btn btn-ghost btn-sm" data-share="copy" href="#">Copy link</a></div>
+<p class="form-note mt2">Educational content only; not medical, psychological, legal or financial advice. See our <a href="disclaimer.html">disclaimer</a>.</p>
+</article>
+<aside class="sidebar no-print">
+<div class="stepper" style="padding:22px"><span class="eyebrow">Free coach match</span><h3>Want help with this?</h3><p class="muted" style="font-size:.92rem">Get introduced to up to 3 vetted coaches. Free intro calls.</p>
+<form class="form" data-ls-form="Lead — Guide sidebar ({{ page.cat }})" data-ok="Thanks! Your coach matches arrive within 24 hours.">
+<input type="hidden" name="guide" value="{{ page.h1 | remove: '"' }}"><input name="name" placeholder="First name" required aria-label="First name"><input type="email" name="email" placeholder="Email" required aria-label="Email">
+<label class="check"><input type="checkbox" name="consent" value="yes" required> Contact me about coaching.</label>
+<button class="btn btn-primary btn-block" type="submit">Match me</button></form></div>
+<div class="ad-slot" data-slot="sidebar"></div>
+<div class="card"><h3>More guides</h3>{% assign guides = site.pages | where: "article", true %}{% for g in guides %}{% if g.url != page.url %}<p><a href="{{ g.url | remove_first: "/" }}">{{ g.h1 }}</a></p>{% endif %}{% endfor %}</div>
+</aside></div></section>
